@@ -26,7 +26,7 @@ public class Main {
         List<String> correctedLines = new ArrayList<>();
         List<String> log = new ArrayList<>();
 
-        // In-memory candidate store
+        
         Map<String, List<String>> candidateMemory = new HashMap<>();
 
         for (String line : lines) {
@@ -51,13 +51,12 @@ public class Main {
             correctedLines.add(corrected.toString().trim());
         }
 
-        // Write output and logs
         Files.write(outputPath, correctedLines);
         Files.write(logPath, log);
 
-        System.out.println("✅ Spell checking complete!");
-        System.out.println("✅ Output: " + outputPath.toAbsolutePath());
-        System.out.println("✅ Log: " + logPath.toAbsolutePath());
+        System.out.println("Spell checking complete!");
+        System.out.println(" Output: " + outputPath.toAbsolutePath());
+        System.out.println(" Log: " + logPath.toAbsolutePath());
 
     }
 }
