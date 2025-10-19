@@ -15,10 +15,10 @@ public class Main {
         // Read Telugu text file
         Path inputPath = Paths.get("input.txt");
         Path outputPath = Paths.get("output.txt");
-        Path logPath = Paths.get("corrections_log.txt");
+        Path logPath = Paths.get("output_log.txt");
 
         if (!Files.exists(inputPath)) {
-            System.err.println("❌ input.txt not found.");
+            System.err.println(" input.txt not found.");
             return;
         }
 
@@ -55,8 +55,5 @@ public class Main {
         Files.write(logPath, log);
 
         System.out.println("Spell checking complete!");
-        System.out.println(" Output: " + outputPath.toAbsolutePath());
-        System.out.println(" Log: " + logPath.toAbsolutePath());
-
     }
 }

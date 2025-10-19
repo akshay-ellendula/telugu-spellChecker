@@ -63,5 +63,5 @@ java Main
 After running, the program will generate the following files in the same directory:
 
 * **`output.txt`**: The corrected version of the text from **`input.txt`**.
-* **`corrections_log.txt`**: A log detailing each misspelled word and the suggestions generated for it.
+* **`output_log.txt`**: A log detailing each misspelled word and the suggestions generated for it.
 * **`telugu_dictionary.txt`**: A clean, indexed copy of the dictionary that was loaded into memory.
