@@ -33,11 +33,8 @@ public class CorpusProcessor {
         }
     }
 
-    /**
-     * Reads a text file and returns a map of words to their frequencies.
-     *
-     * @param filePath The path to the input corpus text file.
-     * @return A Map where keys are words and values are their counts.
+    /*
+     * Reads a text file and returns a map of words to their frequencies
      */
     private static Map<String, Integer> countFrequencies(String filePath) throws IOException {
         Map<String, Integer> frequencyMap = new HashMap<>();
@@ -45,7 +42,7 @@ public class CorpusProcessor {
         try (BufferedReader reader = Files.newBufferedReader(Paths.get(filePath), StandardCharsets.UTF_8)) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Regex to split by whitespace. You can add more complex cleaning if needed.
+                // Regex to split by whitespace
                 String[] words = line.trim().split("\\s+");
 
                 for (String word : words) {
@@ -60,14 +57,10 @@ public class CorpusProcessor {
         return frequencyMap;
     }
     /**
-     * Writes the word frequency map to Text File.
-     *
-     * @param frequencyMap The map containing word frequencies.
-     * @param filePath     The path for the output Text file.
+     * Writes the word frequency map to Text File
      */
     private static void writeFrequenciesToText(Map<String, Integer> frequencyMap, String filePath) throws IOException {
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(filePath), StandardCharsets.UTF_8)) {
-            // Write each map entry as a new line in the Text file
             for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
                 writer.write(entry.getKey() + "," + entry.getValue() + "\n");
             }

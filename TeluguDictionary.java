@@ -18,7 +18,7 @@ public class TeluguDictionary {
                     try {
                         freq.put(parts[0].trim(), Integer.parseInt(parts[1].trim()));
                     } catch (NumberFormatException e) {
-                        // skip bad lines
+                       System.out.println(e);
                     }
                 }
             }
