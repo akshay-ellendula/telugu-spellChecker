@@ -18,17 +18,15 @@ public class CorpusProcessor {
         String corpusFilePath = "telugu_corpus.txt";
         String outputFilePath = "telugu_dictionary.txt";
         try {
-            // 1. Read the corpus and count word frequencies
             Map<String, Integer> wordFrequencies = countFrequencies(corpusFilePath);
 
-            // 2. Write the frequencies to the output text file
             writeFrequenciesToText(wordFrequencies, outputFilePath);
 
             System.out.println("successfully created dictionary with file name: " + outputFilePath);
             System.out.println("total unique words found :- " + wordFrequencies.size());
 
         } catch (IOException e) {
-            System.err.println("❌ An error occurred during file processing.");
+            System.err.println("An error occurred during file processing.");
             e.printStackTrace();
         }
     }
@@ -42,11 +40,10 @@ public class CorpusProcessor {
         try (BufferedReader reader = Files.newBufferedReader(Paths.get(filePath), StandardCharsets.UTF_8)) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Regex to split by whitespace
+
                 String[] words = line.trim().split("\\s+");
 
                 for (String word : words) {
-                    // Clean the word by removing common punctuation
                     String cleanedWord = word.replaceAll("[.,!?।\"]", "");
                     if (!cleanedWord.isEmpty()) {
                         frequencyMap.put(cleanedWord, frequencyMap.getOrDefault(cleanedWord, 0) + 1);

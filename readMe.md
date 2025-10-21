@@ -24,7 +24,7 @@ This program meets its objectives through a combination of data structures and a
 
 ***
 
-## Project Structure 📁
+## Project Structure 
 
 ### Core Java Files
 
@@ -51,7 +51,8 @@ This program meets its objectives through a combination of data structures and a
 
 ### Data Files
 
-* **`telugu_corpus.txt`**: A large text file containing Telugu text used to build the frequency dictionary.
+* **`telugu_corpus.txt`**: A large text file containing Telugu text used to build the frequency dictionary
+                         **https://drive.google.com/drive/folders/1C48-3SHWYRYA9mEGIXxJycT8t5F1-TIA?usp=sharing**
 * **`telugu_dictionary.txt`**: Generated dictionary file containing word-frequency pairs in CSV format.
 * **`input.txt`**: The sample text file you want to spell-check (one word per line).
 * **`output.txt`**: The corrected version of the text from `input.txt`.
@@ -59,7 +60,7 @@ This program meets its objectives through a combination of data structures and a
 
 ***
 
-## How to Run 🚀
+## How to Run 
 
 ### Step 1: Prerequisites & Setup
 
@@ -91,7 +92,7 @@ java Main
 
 ***
 
-## Algorithm Details 🔍
+## Algorithm Details 
 
 ### Edit Distance Calculation
 
@@ -114,4 +115,4 @@ Where:
 - **Edit Distance** is the minimum number of operations needed
 - **Word Frequency** is the occurrence count from the corpus
 
-### ⚠️ Results depend on the corpus you use.
+###  Results depend on the corpus you use.

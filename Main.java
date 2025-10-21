@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) throws Exception {
         TeluguDictionary dict = new TeluguDictionary("telugu_dictionary.txt");
         SpellCorrector corrector = new SpellCorrector(dict);
-        // Read file
         Path inputPath = Paths.get("input.txt");
         Path outputPath = Paths.get("output.txt");
         Path logPath = Paths.get("output_log.txt");

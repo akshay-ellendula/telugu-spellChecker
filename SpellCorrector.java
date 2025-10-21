@@ -13,8 +13,6 @@ public class SpellCorrector {
     public SpellCorrector(TeluguDictionary dict) {
         this.dict = dict;
     }
-
-    // Compute edit distance (4 operations)
     private int editDistance(String a, String b) {
         int m = a.length();
         int n = b.length();
